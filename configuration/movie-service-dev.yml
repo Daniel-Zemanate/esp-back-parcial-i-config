@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8001}
+  port: 8001
 
 spring:
   application:
@@ -13,11 +13,12 @@ spring:
     open-in-view: false
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
         format_sql: true
+    defer-datasource-initialization: true
   h2:
     console:
       enabled: true
