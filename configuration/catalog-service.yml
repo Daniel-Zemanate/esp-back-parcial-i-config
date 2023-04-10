@@ -11,9 +11,18 @@ spring:
     mongodb:
       database: catalog-dev
       port: ${PORT:0}
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
 #  cloud:
 #    config:
 #      enabled: false
+
+queue:
+  catalog:
+    name: CatalogRecords
 
 message: hello from catalog-service
 
