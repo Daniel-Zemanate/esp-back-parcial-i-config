@@ -11,9 +11,9 @@ spring:
     mongodb:
       database: catalog-dev
       port: ${PORT:0}
-  cloud:
-    config:
-      enabled: false
+#  cloud:
+#    config:
+#      enabled: false
 
 message: hello from catalog-service
 
