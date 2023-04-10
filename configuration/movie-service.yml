@@ -24,6 +24,18 @@ spring:
       data-locations: classpath:movie-service.sql
       mode: always
       platform: mysql
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+#  cloud:
+#    config:
+#      enabled: false
+
+queue:
+  catalog:
+    name: CatalogRecords
 
 message: hello from movie-service
 
