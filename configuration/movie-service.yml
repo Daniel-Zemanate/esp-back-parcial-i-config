@@ -3,26 +3,26 @@ server:
 
 spring:
   application:
-    name: movie-service
+    name: movie-service    
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: sa
+    url: jdbc:mysql://localhost:3306/movie-dev
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: general #change database credentials
+    password: general #change database credentials
   jpa:
     open-in-view: false
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.H2Dialect
         format_sql: true
     defer-datasource-initialization: true
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
+  #h2:
+  #  console:
+  #    enabled: true
+  #    path: /h2-console
   sql:
     init:
       data-locations: classpath:movie-service.sql
