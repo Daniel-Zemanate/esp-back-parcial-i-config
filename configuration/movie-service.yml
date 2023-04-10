@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: movie-service    
+    name: movie-service
   datasource:
     url: jdbc:mysql://localhost:3306/movie-dev
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -13,15 +13,17 @@ spring:
     open-in-view: false
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
     defer-datasource-initialization: true
   sql:
     init:
       data-locations: classpath:movie-service.sql
+      mode: always
+      platform: mysql
 
 message: hello from movie-service
 
