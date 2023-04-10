@@ -11,9 +11,18 @@ spring:
     mongodb:
       database: serie-dev
       port: 0
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
 #  cloud:
 #    config:
 #      enabled: false
+
+queue:
+  catalog:
+    name: CatalogRecords
 
 message: hello from serie-service
 
