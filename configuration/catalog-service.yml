@@ -21,8 +21,10 @@ spring:
 #      enabled: false
 
 queue:
-  catalog:
-    name: CatalogRecords
+  movie:
+    name: MovieRecords
+  serie:
+    name: SerieRecords
 
 message: hello from catalog-service
 
